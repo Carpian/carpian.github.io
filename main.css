@@ -1,7 +1,7 @@
 
 body {
     height: 100%;
-    background-image: url(../Images/cyberbar.jpg);
+    background-image: url(/Images/cyberbar.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -155,7 +155,7 @@ li {
 .twod {
     width: 40%;
     height: 80%;
-    background-image: url(../Images/nightcity1.jpg);
+    background-image: url(/Images/nightcity1.jpg);
     background-size: cover;
     background-position: center;
     box-shadow: 0px 0px 25px rgb(37, 255, 244);
@@ -165,7 +165,7 @@ li {
 .threed {
     width: 40%;
     height: 80%;
-    background-image: url(../Images/nightcity.png);
+    background-image: url(/Images/nightcity.png);
     background-size: cover;
     background-position: center;
     box-shadow: 0px 0px 25px rgb(52, 43, 172);
@@ -204,7 +204,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../Images/patternoverlay.png);
+    background-image: url(/Images/patternoverlay.png);
     background-repeat: repeat;
     background-size: initial;
     opacity: 0.6;
