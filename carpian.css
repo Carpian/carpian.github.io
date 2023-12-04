@@ -1,12 +1,12 @@
-
 body {
     height: 100%;
-    background-image: url(/Images/cyberbar.jpg);
+    background-image: url(/Images/neo2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     font-family: Verdana;
     overflow: hidden;
+    
 }
 
 header {
@@ -52,10 +52,7 @@ li {
     padding: 5px;
     margin: 20px;
 }
-li {
-    outline-offset: 10px;
-    outline: 1px solid red;
-}
+
 
 .overflow {
     width: 96%;
@@ -85,30 +82,51 @@ li {
     margin-top: 5%;
     position: absolute;
     z-index: 9;
+
+    filter: drop-shadow(8px 5px 1px rgb(226, 0, 75))
+        drop-shadow(-8px -5px 1px rgb(255, 110, 134))
+        invert(100%);
+    /*filter: drop-shadow(1.5px 0 0 white) 
+        drop-shadow(0 1.5px 0 white)
+        drop-shadow(-1.5px 0 0 white) 
+        drop-shadow(0 -1.5px 0 white);*/
 }
 .secdiv1 {
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
-    margin-top: 10%;
+    margin-top: 6%;
     position: absolute;
 }
 
 .intro {
     width: 45%;
     height: 500px;
-    background-color: cornflowerblue;
+    background-color: rgba(0, 0, 0, 0.023);
     margin-top: 15%;
     position: relative;
     float: left;
     font-size: 130%;
     padding: 5px;
-
 }
+.intro {
+    background-image: url(/Images/patternoverlay.png);
+    background-repeat: repeat;
+    background-size: initial;
+
+    border: 0px solid lime;
+    color: whitesmoke;
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
+
+    filter: drop-shadow(8px 5px 1px rgb(29,255,180))
+        drop-shadow(-8px -5px 1px rgb(0,145,121));
+}
+
 .rightcol {
     width: 50%;
     height: 780px;
-    background-color: rgba(103, 153, 153, 0.479);
+    background-color: rgba(103, 153, 153, 0);
     margin-top: 15%;
     float: right;
     position: relative;
@@ -116,22 +134,57 @@ li {
     display: flex;
     align-items: center;
 }
+.rightcol_back {
+    background-color: rgba(255, 0, 0, 0);
+    width: 100%;
+    height: 780px;
+    position: absolute;
+}
+.rightcol_back_img {
+    position: absolute;
+    width: 70%;
+    height: 450px;
+    transform: translate( 140px, -100px);
+    z-index: -3;
+    filter: contrast(130%);
+
+}
+
 .mainimg {
     width: auto;
-    height: 100%;
+    height: 120%;
+    transform: translateY(-190px);
     margin-right: auto;
     margin-left: auto;
+
+    /*filter: drop-shadow(1.5px 0 0 rgb(255, 0, 0)) 
+        drop-shadow(0 1.5px 0 rgb(255, 0, 0))
+        drop-shadow(-1.5px 0 0 rgb(255, 0, 0)) 
+        drop-shadow(0 -1.5px 0 rgb(255, 0, 0));*/
 }
 
 
 .skillset {
-    width: 80%; 
-    height: 140px;
-    background-color: rgb(98, 130, 179);
-    margin-top: 950px;
-    margin-left: -10%;
+    width: 85%; 
+    height: 150px;
+    background-color: rgb(0, 0, 0, 0.089);
+    margin-top: 850px;
+    margin-left: 0%;
     position: absolute;
     z-index: 8;
+    padding: 5px;
+
+    background-image: url(/Images/patternoverlay.png);
+    background-repeat: repeat;
+    background-size: initial;
+    
+    box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
+    border: 0px solid;
+    color: whitesmoke;
+    backdrop-filter: blur(10px);
+
+    filter: drop-shadow(8px 5px 1px rgb(29,255,180))
+        drop-shadow(-8px -5px 1px rgb(0,145,121));
 }
 
 
@@ -155,21 +208,26 @@ li {
 .twod {
     width: 40%;
     height: 80%;
-    background-image: url(/Images/nightcity1.jpg);
+    background-image: url(/Images/Ilsa.png);
     background-size: cover;
     background-position: center;
-    box-shadow: 0px 0px 25px rgb(37, 255, 244);
-    border: solid 1px white;
+    box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
     float: left;
+
+    filter: drop-shadow(6px 5px 1px rgb(29,255,180))
+        drop-shadow(-6px -5px 1px rgb(0,145,121));
 }
 .threed {
     width: 40%;
     height: 80%;
-    background-image: url(/Images/nightcity.png);
+    background-image: url(/Images/out3_edited.jpg);
     background-size: cover;
     background-position: center;
-    box-shadow: 0px 0px 25px rgb(52, 43, 172);
+    box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
     float: right;
+    
+    filter: drop-shadow(6px 5px 1px rgb(29,255,180))
+        drop-shadow(-6px -5px 1px rgb(0,145,121));
 }
 
 
@@ -234,6 +292,7 @@ footer {
     height: 100%;
     border-right: solid 2px red;
     position: fixed;
+    top: 0;
     left: 0;
     background-color: rgb(19, 19, 19);
     z-index: 10;
@@ -279,12 +338,13 @@ li:hover {
 .twod:hover {
     transform: scale(1.1);
     transition: 2s ease;
-    box-shadow: 0px 0px 40px red;
+    box-shadow: 0px 0px 40px rgb(84, 255, 227);
 }
 .threed:hover {
     transform: scale(1.1);
     transition: 2s ease;
-    box-shadow: 0px 0px 40px red;
+    box-shadow: 0px 0px 40px rgb(84, 255, 227);
+    
 }
 
 @media only screen and (max-width: 650px) {
@@ -303,31 +363,53 @@ li:hover {
     }
 
     .mainlogo {
-        width: 200px;
+        width: 210px;
+        left: 0;
+        margin-left: 7%;
+        margin-top: 10%;
     }
-    
     
     .secdiv1, .secdiv2  {
         width: 100%;
         margin-top: 10%;
-       
     }
 
-    .intro, .rightcol {
-        width: 42%;
-        height: 220px;
+    .intro {
+        width: 90%;
+        height: 200px;
         font-size: 70%;        
     }
-    .skillset {
-        width: 80%;
-        height: 80px;
-        margin-top: 350px;
-        margin-left: -30px;
+    .rightcol {
+        width: 40%;
+        height: 350px;
+        position: relative;
+        margin-top: -300px;
+        z-index: -10;
+    }
+    .rightcol_back {
+        height: 350px;
+    }
+    .rightcol_back_img {
+        width: 90%;
+        height: 250px;
+        margin-top: 60%;
+        margin-left: -60%;
+        opacity: 0;
     }
     .mainimg {
         width: auto;
-        height: 220px;
+        height: 460px;
+        margin-top: 60%;
+        margin-left: -30%;
     }
+
+    .skillset {
+        width: 90%;
+        height: 80px;
+        margin-top: 400px;
+        margin-left: 0px;
+    }
+    
     
     .intro { margin-left: 5%; }
     .rightcol { margin-right: 5%; }
