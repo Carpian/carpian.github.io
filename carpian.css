@@ -1,10 +1,11 @@
+
 body {
     height: 100%;
     background-image: url(/Images/neo2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: Verdana;
+    font-family: monospace;
     overflow: hidden;
     
 }
@@ -27,30 +28,75 @@ nav {
     margin-top: 5px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     
 }
-ul {
-    background-color: rgba(0, 0, 255, 0);
-    width: 100%;
-    margin-left: -5%;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-}
 
-li {
+.nav {
     background-color: rgb(19, 19, 19);
     border: solid 2px red; 
     border-top: 0px;
     color: red;
-    font-size: 90%;
-}
-li {
+    font-size: 95%;
+
     text-align: center;
     width: 15%;
     border-radius: 0px 0px 5px 5px;
     padding: 5px;
     margin: 20px;
+}
+.nav a {
+    color: red;
+    text-decoration: none;
+}
+.nav:hover {
+    color: aliceblue;
+    transform: scale(1.1);
+    z-index: 2;
+}
+.nav a:hover {
+    color: aliceblue;
+}
+
+.dropbtn{
+    margin-top: 0px;
+    padding: 0%;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 2;
+}
+.dropdown {
+    height: 25%;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    height: 100px;
+    width: 103%;
+    margin-top: -8%;
+    margin-left: -6%;
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(rgb(255, 36, 36), rgba(255, 0, 0, 0));
+    min-width: 100%;
+    z-index: 1;
+    /*box-shadow: 1px -20px 10px 4px rgba(255, 30, 30, 0.175);*/
+}
+.dropdown-content a {
+    padding-bottom: 5%;
+    margin: 10%;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: rgba(255, 45, 45, 0);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    color: aliceblue;
+    background-color: rgba(0, 255, 255, 0);
 }
 
 
@@ -86,11 +132,17 @@ li {
     filter: drop-shadow(8px 5px 1px rgb(226, 0, 75))
         drop-shadow(-8px -5px 1px rgb(255, 110, 134))
         invert(100%);
-    /*filter: drop-shadow(1.5px 0 0 white) 
-        drop-shadow(0 1.5px 0 white)
-        drop-shadow(-1.5px 0 0 white) 
-        drop-shadow(0 -1.5px 0 white);*/
+    
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
 }
+@keyframes example {
+    0%   {top:5%;}
+    50% {top:7%;}
+    100%   {top:5%;}
+}
+  
 .secdiv1 {
     width: 90%;
     padding-left: 5%;
@@ -106,11 +158,11 @@ li {
     margin-top: 15%;
     position: relative;
     float: left;
-    font-size: 130%;
+    font-size: 140%;
     padding: 5px;
 }
 .intro {
-    background-image: url(/Images/patternoverlay.png);
+    background-image: url(/Images/patternoverlay2.png);
     background-repeat: repeat;
     background-size: initial;
 
@@ -122,6 +174,30 @@ li {
     filter: drop-shadow(8px 5px 1px rgb(29,255,180))
         drop-shadow(-8px -5px 1px rgb(0,145,121));
 }
+.introbanner {
+    width: 100%;
+    margin-top: 12%;
+}
+.icondiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.icons {
+    float: left;
+    margin: 0% 3% 0% 3%;
+}
+.icons img {
+    width: 70%;
+}
+.icons:hover {
+    transform: scale(1.1);
+}
+.intro p, h3 {
+    margin-left: 10px;
+}
+
+
 
 .rightcol {
     width: 50%;
@@ -149,7 +225,6 @@ li {
     filter: contrast(130%);
 
 }
-
 .mainimg {
     width: auto;
     height: 120%;
@@ -157,10 +232,6 @@ li {
     margin-right: auto;
     margin-left: auto;
 
-    /*filter: drop-shadow(1.5px 0 0 rgb(255, 0, 0)) 
-        drop-shadow(0 1.5px 0 rgb(255, 0, 0))
-        drop-shadow(-1.5px 0 0 rgb(255, 0, 0)) 
-        drop-shadow(0 -1.5px 0 rgb(255, 0, 0));*/
 }
 
 
@@ -173,8 +244,10 @@ li {
     position: absolute;
     z-index: 8;
     padding: 5px;
+    display: flex;
+    align-items: center;
 
-    background-image: url(/Images/patternoverlay.png);
+    background-image: url(/Images/patternoverlay2.png);
     background-repeat: repeat;
     background-size: initial;
     
@@ -185,6 +258,17 @@ li {
 
     filter: drop-shadow(8px 5px 1px rgb(29,255,180))
         drop-shadow(-8px -5px 1px rgb(0,145,121));
+}
+.skilldiv {
+    background-color: rgba(0, 255, 255, 0);
+    padding: 1% 2% 1% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skilldiv img {
+    margin: 0% 3% 0% 3%;
+    width: 10%;
 }
 
 
@@ -205,6 +289,19 @@ li {
     display: flex;
     justify-content: space-evenly;
 }
+.secdiv2 h2 {
+    width: auto;
+    height: 75%;
+    background-color: rgba(31, 94, 149, 0);
+    font-size: 220%;
+    color: aliceblue;
+    z-index: 19;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .twod {
     width: 40%;
     height: 80%;
@@ -212,23 +309,55 @@ li {
     background-size: cover;
     background-position: center;
     box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
-    float: left;
 
     filter: drop-shadow(6px 5px 1px rgb(29,255,180))
         drop-shadow(-6px -5px 1px rgb(0,145,121));
 }
+.twod:hover {
+    transform: scale(1.1);
+    transition: 2s ease;
+    box-shadow: 0px 0px 40px rgb(84, 255, 227);
+}
+
 .threed {
     width: 40%;
     height: 80%;
-    background-image: url(/Images/out3_edited.jpg);
+    background-image: url(/Images/out3_edited.png);
     background-size: cover;
     background-position: center;
     box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
-    float: right;
     
     filter: drop-shadow(6px 5px 1px rgb(29,255,180))
         drop-shadow(-6px -5px 1px rgb(0,145,121));
 }
+.threed:hover {
+    transform: scale(1.1);
+    transition: 2s ease;
+    box-shadow: 0px 0px 40px rgb(84, 255, 227);
+    
+}
+
+
+.twlink, .thlink {
+    width: auto;
+    height: 100%;
+    background-color: rgba(31, 94, 149, 0);
+
+    font-size: 220%;
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: aliceblue;
+    text-shadow: 0px 0px 5px rgb(29,255,180);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 20;
+}
+
 
 
 /*-------------- FOOTER --------------*/
@@ -239,7 +368,39 @@ footer {
     bottom: 0;
     right: 0;
     position: fixed;
-    z-index: 10;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+}
+.miniicon {
+    width: 20px;
+    filter: none;
+    margin-left: 4%;
+}
+footer p {
+    color: white;
+    font-size: 80%;
+    margin-left: 2%;
+}
+footer div {
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3%;
+}
+.mail {
+    color: white;
+    font-size: 80%;
+    margin: 0%;
+    float: right;
+}
+footer img {
+    width: 20px;
+    margin-left: 3%;
+    float: right;
+    filter: grayscale(100%) brightness(500%);
 }
 
 
@@ -330,24 +491,9 @@ footer {
     background: rgb(255, 68, 84); 
 }
 
-/* --------------- HOVERS -------------- */
+/* ------------------------- SCREEN SIZE ------------------------ */
 
-li:hover {
-    transform: scale(1.1);
-}
-.twod:hover {
-    transform: scale(1.1);
-    transition: 2s ease;
-    box-shadow: 0px 0px 40px rgb(84, 255, 227);
-}
-.threed:hover {
-    transform: scale(1.1);
-    transition: 2s ease;
-    box-shadow: 0px 0px 40px rgb(84, 255, 227);
-    
-}
-
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     .topsection {
         height: 500px;
     }
@@ -369,21 +515,36 @@ li:hover {
         margin-top: 10%;
     }
     
-    .secdiv1, .secdiv2  {
+    .secdiv1 {
         width: 100%;
-        margin-top: 10%;
+        margin-top: 20%;
     }
+    .secdiv2 {
+        width: 100%;
+        margin-top: 80%;
+    }
+
+    /*--------------- TOP SECTION ---------------*/
+    .intro { margin-left: 5%; }
+    .rightcol { margin-right: 5%; }
 
     .intro {
         width: 90%;
-        height: 200px;
-        font-size: 70%;        
+        height: 450px;
+        font-size: 120%;        
     }
+    .introbanner {
+        margin-top: 7%;
+    }
+    .icondiv {
+        margin-top: 5%;
+    }
+    
     .rightcol {
         width: 40%;
         height: 350px;
         position: relative;
-        margin-top: -300px;
+        margin-top: -350px;
         z-index: -10;
     }
     .rightcol_back {
@@ -399,21 +560,25 @@ li:hover {
     .mainimg {
         width: auto;
         height: 460px;
-        margin-top: 60%;
+        margin-top: -60%;
         margin-left: -30%;
     }
 
+    /*--------------- SKILL SECTION ---------------*/
     .skillset {
         width: 90%;
         height: 80px;
-        margin-top: 400px;
+        margin-top: 700px;
         margin-left: 0px;
+        display: flex;
+        justify-content: center;
     }
-    
-    
-    .intro { margin-left: 5%; }
-    .rightcol { margin-right: 5%; }
+    .skilldiv img {
+        margin: 0% 3% 0% 3%;
+        width: 11%;
+    }
 
+    /*--------------- BOTTOM SECTION ---------------*/
     .twod, .threed {
         width: 40%;
         height: 45%;
@@ -421,4 +586,25 @@ li:hover {
     .twod { margin-left: 5%; }
     .threed { margin-right: 5%;}
 
+    .twlink, .thlink {
+        font-size: 130%;
+    }
+
+    /*-------------- FOOTER --------------*/
+    
+    .miniicon {
+        margin-left: 1%;
+    }
+    footer p {
+        font-size: 70%; 
+        white-space: nowrap;
+        margin-left: 2%;
+    }
+    .mail {
+        font-size: 70%;
+        margin-right: 3%;
+    }
+    footer img { 
+        width: 15px;
+    }
 }
