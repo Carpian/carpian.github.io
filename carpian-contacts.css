@@ -1,0 +1,455 @@
+
+body {
+    height: 100%;
+    background-image: url(/Images/neo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: monospace;
+    overflow: hidden;
+    
+}
+
+header {
+    width: 100%;
+    height: 5%;
+    background-color: rgb(19, 19, 19);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    width: 50%;
+    height: 200%;
+    background-color: rgba(112, 128, 144, 0);
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.nav {
+    background-color: rgb(19, 19, 19);
+    border: solid 2px red; 
+    border-top: 0px;
+    color: red;
+    font-size: 95%;
+
+    text-align: center;
+    width: 15%;
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px;
+    margin: 20px;
+}
+.nav a {
+    color: red;
+    text-decoration: none;
+}
+.nav:hover {
+    color: aliceblue;
+    transform: scale(1.1);
+    z-index: 2;
+}
+.nav a:hover {
+    color: aliceblue;
+}
+
+
+.dropbtn {
+    margin-top: 0px;
+    padding: 0%;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 2;
+}
+.dropdown {
+    height: 25%;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    height: 100px;
+    width: 103%;
+    margin-top: -8%;
+    margin-left: -6%;
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(rgb(255, 36, 36), rgba(255, 0, 0, 0));
+    min-width: 100%;
+    z-index: 1;
+    /*box-shadow: 1px -20px 10px 4px rgba(255, 30, 30, 0.175);*/
+}
+.dropdown-content a {
+    padding-bottom: 5%;
+    margin: 10%;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: rgba(255, 45, 45, 0);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    color: aliceblue;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+
+.overflow {
+    width: 96%;
+    height: 95%;
+    border: 1px solid black;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+
+/*--------------- TOP SECTION ---------------*/
+.topsection {
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(71, 61, 139, 0);
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.mainlogo {
+    width: 45%;
+    height: auto;
+    margin-top: 5%;
+    position: absolute;
+    z-index: 9;
+
+    filter: drop-shadow(8px 5px 1px rgb(226, 0, 75))
+        drop-shadow(-8px -5px 1px rgb(255, 110, 134))
+        invert(100%);
+    
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {top:5%;}
+    50% {top:7%;}
+    100%   {top:5%;}
+}
+  
+.secdiv1 {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 6%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.intro {
+    width: 45%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.023);
+    margin-top: 15%;
+    position: relative;
+    float: left;
+    font-size: 130%;
+    padding: 5px;
+}
+.intro {
+    background-image: url(/Images/patternoverlay2.png);
+    background-repeat: repeat;
+    background-size: initial;
+
+    border: 0px solid lime;
+    color: whitesmoke;
+    backdrop-filter: blur(0px);
+    box-shadow: 0px 0px 25px rgba(37, 255, 193, 0.3);
+
+    filter: drop-shadow(8px 5px 1px rgb(29,255,180))
+        drop-shadow(-8px -5px 1px rgb(0,145,121));
+}
+.intro h3 {
+    font-weight: bold;
+    margin-left: 5%;
+    margin-bottom: 15%;
+}
+.intro p {
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+.introbanner {
+    width: 100%;
+    margin-top: 17%;
+}
+.icondiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.icons {
+    float: left;
+    margin: 0% 5% 0% 5%;
+}
+.icons img {
+    width: 35px;
+}
+.icons:hover {
+    transform: scale(1.1);
+}
+
+.leftcol {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(20, 230, 171, 0.459));
+    width: 26%;
+    height: 500px;
+    margin-top: 15%;
+    float: left;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+}
+.leftcol img {
+    height: 500px;
+    margin-left: 25%;
+}
+
+.rightcol {
+    width: 26%;
+    height: 500px;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(20, 230, 171, 0.459));
+    margin-top: 15%;
+    float: right;
+    position: relative;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+}
+.rightcol img {
+    height: 500px;
+    
+    filter: drop-shadow(8px 5px 1px rgb(29,255,180))
+        drop-shadow(-8px -5px 1px rgb(0,145,121));    
+}
+
+
+
+
+/*-------------- FOOTER --------------*/
+footer {
+    width: 100%;
+    height: 5%;
+    background-color: rgb(19, 19, 19);
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+}
+.miniicon {
+    width: 20px;
+    filter: none;
+    margin-left: 4%;
+}
+footer p {
+    color: white;
+    font-size: 80%;
+    margin-left: 2%;
+}
+footer div {
+    width: 70%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3%;
+}
+.mail {
+    color: white;
+    font-size: 80%;
+    margin: 0%;
+    float: right;
+}
+footer img {
+    width: 20px;
+    margin-left: 3%;
+    float: right;
+    filter: grayscale(100%) brightness(500%);
+}
+
+
+/* ------------ FRAME DESIGN ----------- */
+
+.backdiv {
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.637);
+    filter: blur(5px);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);  
+    z-index: -9; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Images/patternoverlay.png);
+    background-repeat: repeat;
+    background-size: initial;
+    opacity: 0.6;
+    z-index: -10;
+}
+
+.topbar {
+    width: 100%;
+    height: 5%;
+    border-bottom: solid 2px red;
+    position: fixed;
+    top: 0;
+    background-color: rgb(19, 19, 19);
+    z-index: 10;
+}
+.bottombar {
+    width: 100%;
+    height: 5%;
+    border-top: solid 2px red;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(19, 19, 19);
+    z-index: 10;
+}
+.leftbar {
+    width: 2%;
+    height: 100%;
+    border-right: solid 2px red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(19, 19, 19);
+    z-index: 10;
+}
+.rightbar {
+    width: 2%;
+    height: 100%;
+    border-left: solid 2px red;
+    position: fixed;
+    right: 0;
+    background-color: rgb(19, 19, 19);
+    z-index: 10;
+}
+
+
+/* ------------ SCROLLBAR ----------- */
+
+::-webkit-scrollbar {
+    position: absolute;
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.418);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 28, 46); 
+    border-radius: 50px 0px 0px 50px;
+
+} 
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 68, 84); 
+}
+
+/* ------------------------- SCREEN SIZE ------------------------ */
+
+@media only screen and (max-width: 700px) {
+    .topsection {
+        height: 500px;
+    }
+    
+    nav {
+        width: 85%;
+    }
+    ul {
+        margin-left: -10%;
+    }
+    li {
+        font-size: 80%;
+    }
+
+    .mainlogo {
+        width: 210px;
+        margin-top: 10%;
+    }
+    
+    .secdiv1, .secdiv2  {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    /*--------------- TOP SECTION ---------------*/
+    .intro {
+        width: 90%;
+        height: 500px;
+        font-size: 70%;        
+    }
+    .intro p, h3 {
+        font-size: 160%;
+    }
+    .intro p {
+        margin-left: 10%;
+    }
+    
+    .leftcol {
+        width: 10%;
+        height: 500px;
+    }
+    .rightcol {
+        width: 10%;
+        height: 500px;
+    }
+
+    .leftcol img {
+        height: 600px;
+        margin-top: -130%;
+    }
+    .rightcol img {
+        height: 600px;
+        margin-left: -360%;
+        margin-top: -130%;
+    }
+
+    /*-------------- FOOTER --------------*/
+    
+    .miniicon {
+        margin-left: 1%;
+    }
+    footer p {
+        font-size: 70%; 
+        white-space: nowrap;
+        margin-left: 2%;
+    }
+    .mail {
+        font-size: 70%;
+        margin-right: 3%;
+    }
+    footer img { 
+        width: 15px;
+    }
+
+
+}
